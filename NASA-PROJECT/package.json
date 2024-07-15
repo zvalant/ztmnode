@@ -1,0 +1,24 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "server": "npm run watch --prefix server",
+    "build-client": "npm run build --prefix client",
+    "client": "npm start --prefix client",
+    "watch": "concurrently \"npm run server\" \"npm run client\"",
+    "deploy": "concurrently \"npm run build --prefix client\"  \"npm start --prefix server\"",
+    "deploy-cluster": "concurrently \"npm run build --prefix client\"  \"npm run cluster --prefix server\"",
+    "test": "concurrently \"npm test --prefix server\" \"npm test --prefix client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+
+}

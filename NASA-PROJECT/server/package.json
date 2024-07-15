@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "watch": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "cluster-start": "pm2 start src/server.js -i max",
+    "cluster-stop": "pm2 stop src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node" 
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.6",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.1",
+    "morgan": "^1.10.0",
+    "parse": "^5.2.0",
+    "path": "^0.12.7",
+    "pm2": "^5.4.1",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0"
+  }
+}
